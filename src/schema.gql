@@ -1,0 +1,31 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type ProductModel {
+  id: String!
+
+  """Name of the product"""
+  name: String!
+
+  """price of product"""
+  price: Float!
+
+  """quantity available of the product in store"""
+  stock: Float!
+}
+
+type Query {
+  allProducts: [ProductModel!]!
+  product(id: String!): ProductModel!
+}
+
+type Mutation {
+  create(createProductInput: CreateProductInput!): ProductModel!
+}
+
+input CreateProductInput {
+  name: String!
+  price: Float!
+  stock: Float!
+}
